@@ -1,0 +1,30 @@
+* {
+  --light-red: 0, 100%, 67%;
+  --orangey-yellow: 39, 100%, 56%;
+  --green-teal: 166, 100%, 37%;
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  --regular-white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+
+  --gray-blue: 224, 30%, 27%;
+  --light-lavender: 241, 100%, 89%;
+}
+
+.background-gradient {
+  background: rgb(46, 43, 233);
+  background: linear-gradient(
+    0deg,
+    rgba(46, 43, 233, 0.9) 30%,
+    rgba(120, 87, 255, 1) 90%
+  );
+}
+
+.circle-gradient {
+  background: rgb(78, 33, 202);
+  background: linear-gradient(
+    180deg,
+    rgba(78, 33, 202, 0.6) 54%,
+    rgba(36, 33, 202, 0.1) 85%
+  );
+}

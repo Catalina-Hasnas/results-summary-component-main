@@ -1,0 +1,173 @@
+/* ? https://github.com/necolas/normalize.css */
+/* ? small CSS file that provides better cross-browser consistency in the default styling of HTML elements. */
+@import "normalise.css";
+
+/* || Colors */
+@import "colors.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@100;200;300;400&family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  line-height: 1;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  width: clamp(375px, 80%, 660px);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(212px, 1fr));
+  border-radius: 1.5rem;
+  box-shadow: 10px 10px 20px 3px hsla(var(--light-lavender), 0.3);
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+}
+
+.result > p:first-child {
+  color: hsl(var(--light-lavender));
+  font-weight: 700;
+}
+
+.result > p:last-child {
+  color: hsl(var(--light-lavender));
+  font-size: 0.8rem;
+  margin-inline: 1.5rem;
+  text-align: center;
+}
+
+.circle {
+  display: flex;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.circle > p:first-child {
+  display: inline;
+  color: var(--regular-white);
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.circle > p:last-child {
+  display: inline;
+  color: hsla(var(--light-lavender), 0.8);
+  font-size: 0.8rem;
+  margin-block-start: 0.2rem;
+}
+
+.circle + p {
+  color: var(--regular-white);
+  font-size: 1.5rem;
+  margin-block: 1rem 0.5rem;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  font-size: 0.8rem;
+  margin-inline: 2rem;
+  padding-block: 1rem;
+  gap: 0.8rem;
+}
+
+.summary p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.summary button {
+  background-color: hsl(var(--gray-blue));
+  border-radius: 2rem;
+  padding-inline: 1rem;
+  padding-block: 0.8rem;
+  color: var(--regular-white);
+  cursor: pointer;
+}
+
+.summary button:active {
+  background: rgb(46, 43, 233);
+  background: linear-gradient(
+    0deg,
+    rgba(46, 43, 233, 0.9) 30%,
+    rgba(120, 87, 255, 1) 90%
+  );
+}
+
+.reaction {
+  --custom-background-color: hsla(var(--light-red), 0.2);
+  --custom-text-color: hsl(var(--light-red));
+}
+
+.memory {
+  --custom-background-color: hsla(var(--orangey-yellow), 0.2);
+  --custom-text-color: hsl(var(--orangey-yellow));
+}
+
+.verbal {
+  --custom-background-color: hsla(var(--green-teal), 0.2);
+  --custom-text-color: hsl(var(--green-teal));
+}
+
+.visual {
+  --custom-background-color: var(--pale-blue);
+  --custom-text-color: var(--cobalt-blue);
+}
+
+.summary-item {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  background-color: var(--custom-background-color);
+}
+
+.summary-item > span:first-of-type {
+  color: var(--custom-text-color);
+  margin-inline-start: 0.5rem;
+  font-weight: 700;
+}
+
+.summary-item-score {
+  grid-column-start: 4;
+}
+
+.summary-item-score span:first-child {
+  font-weight: 700;
+}
+
+.summary-item-score span:last-child {
+  color: hsla(var(--gray-blue), 0.8);
+}
